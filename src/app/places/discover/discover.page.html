@@ -18,13 +18,20 @@
           <ion-card-content>
             <p> {{loadedPlaces[0].address}} </p>
           </ion-card-content>
+          <div>
+            <ion-button fill="clear" [routerLink]="['/','places','tabs','discover',loadedPlaces[0].id]">
+              More
+            </ion-button>
+          </div>
         </ion-card>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="12" class="ion-text-center">
         <ion-list>
-          <ion-item *ngFor="let place of loadedPlaces.slice(1)">
+          <ion-item *ngFor="let place of loadedPlaces.slice(1)"
+          [routerLink] ="['/','places','tabs','discover',place.id]"
+          detail >
             <ion-thumbnail>
               <ion-img [src]="place.img"></ion-img>
             </ion-thumbnail>
