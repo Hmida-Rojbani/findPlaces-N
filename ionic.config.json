@@ -1,0 +1,7 @@
+{
+  "name": "findPlaces",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
