@@ -11,11 +11,13 @@ import { Place } from '../place';
 export class DiscoverPage implements OnInit {
 
   loadedPlaces: Place[];
+  listLoadedPlaces: Place[];
   constructor(private placesService: PlacesService,
     private menuCtrl: MenuController) { }
 
   ngOnInit() {
     this.loadedPlaces = this.placesService.getPlaces();
+    this.listLoadedPlaces = this.loadedPlaces.slice(1);
   }
 
   onOpenMenu(){

@@ -34,8 +34,8 @@
     </ion-row>
     <ion-row>
       <ion-col size="12" class="ion-text-center">
-        <ion-list>
-          <ion-item *ngFor="let place of loadedPlaces.slice(1)"
+        <ion-virtual-scroll [items]="listLoadedPlaces">
+          <ion-item *virtualItem="let place"
           [routerLink] ="['/','places','tabs','discover',place.id]"
           detail >
             <ion-thumbnail>
@@ -46,7 +46,7 @@
               <p> {{place.address}} </p>
             </ion-label>
           </ion-item>
-        </ion-list>
+        </ion-virtual-scroll>
       </ion-col>
     </ion-row>
   </ion-grid>
