@@ -45,4 +45,23 @@ export class PlacesService {
       ...this.places.find(p => p.id === id)
     };
   }
+
+  addPlace(
+    title: string,
+    description: string,
+    price: number,
+    dateFrom: Date,
+    dateTo: Date
+  ) {
+    const newPlace = new Place(
+      Math.random().toString(),
+      title,
+      description,
+      'https://lonelyplanetimages.imgix.net/mastheads/GettyImages-538096543_medium.jpg?sharp=10&vib=20&w=1200',
+      price,
+      dateFrom,
+      dateTo,
+      //this.authService.userId
+    );
+  }
 }

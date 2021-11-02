@@ -11,7 +11,7 @@ import { AuthService } from '../services/auth.service';
 })
 export class AuthPage implements OnInit {
 
-  isLoading = true;
+  isLoading = false;
   isLogin= true;
   constructor(private authService:AuthService,
               private router: Router,
